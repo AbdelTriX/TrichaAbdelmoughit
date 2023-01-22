@@ -2,6 +2,7 @@ package com.example.abdelmoughittricha;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
@@ -11,11 +12,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
-    Button btn_reinitializer,btn_quitter,btn_afficher;
+    Button btn_reinitializer,btn_quitter,btn_afficher,color1,color2,color3;
     View v ;
     EditText number;
     TextView tv;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,10 @@ public class MainActivity extends AppCompatActivity {
         btn_quitter=findViewById(R.id.q);
         btn_afficher=findViewById(R.id.a);
         number=findViewById(R.id.insert);
-        tv=findViewById(R.id.tv);
+        color1=findViewById(R.id.c1);
+        color2=findViewById(R.id.c2);
+        color3=findViewById(R.id.c3);
+        tv=findViewById(R.id.textView);
 
         Toast toast;
         toast=Toast.makeText(MainActivity.this,"VEUILLEZ SAISIR UN ENTIER !!",Toast.LENGTH_SHORT);
@@ -47,24 +51,16 @@ public class MainActivity extends AppCompatActivity {
                     tv.setText(s);
 
 
+
                 }catch (NumberFormatException e){
                     toast.show();
                     btn_reinitializer.callOnClick();
+
 
                 }
 
             }
 
-        });
-
-
-
-        btn_quitter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-                System.exit(0);
-            }
         });
         btn_reinitializer.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("DefaultLocale")
@@ -78,6 +74,41 @@ public class MainActivity extends AppCompatActivity {
                 tv.setText(r.toString());
             }
         });
+
+
+        btn_quitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                System.exit(0);
+            }
+        });
+
+        color1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setMyScreenColor(Color.DKGRAY);
+            }
+        });
+        color2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setMyScreenColor(Color.BLUE);
+            }
+        });
+        color3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setMyScreenColor(Color.GRAY);
+            }
+        });
+
+
+    }
+    public void setMyScreenColor(int color) {
+        View v = this.getWindow().getDecorView();
+        v.setBackgroundColor(color);
+
 
     }
 }
