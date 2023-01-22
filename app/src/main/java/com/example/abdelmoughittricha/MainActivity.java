@@ -13,6 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     Button btn_reinitializer,btn_quitter,btn_afficher;
+    View v ;
     EditText number;
     TextView tv;
 
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         number=findViewById(R.id.insert);
         tv=findViewById(R.id.tv);
 
+        Toast toast;
+        toast=Toast.makeText(MainActivity.this,"VEUILLEZ SAISIR UN ENTIER !!",Toast.LENGTH_SHORT);
 
         btn_afficher.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }catch (NumberFormatException e){
+                    toast.show();
                     btn_reinitializer.callOnClick();
 
                 }
