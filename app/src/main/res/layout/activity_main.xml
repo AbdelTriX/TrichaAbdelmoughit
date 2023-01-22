@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextNumberDecimal"
+        android:id="@+id/insert"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/b"
+        android:id="@+id/r"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+        app:layout_constraintTop_toBottomOf="@+id/insert" />
 
     <Button
         android:id="@+id/a"
@@ -44,7 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/b" />
+        app:layout_constraintTop_toBottomOf="@+id/r" />
 
     <Button
         android:id="@+id/q"
@@ -63,10 +63,21 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="144dp"
-        android:text="TextView"
+        android:maxLines="10"
+        android:text="\ ? * 0 =\?
+                    \n \? * 0 =\?
+                    \n \? * 0 =\?
+                    \n \? * 0 =\?
+                    \n \? * 0 =\?
+                    \n \? * 0 =\?
+                    \n \? * 0 =\?
+                    \n \? * 0 =\?
+                    \n \? * 0 =\?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toBottomOf="@+id/a" />
 </androidx.constraintlayout.widget.ConstraintLayout>
