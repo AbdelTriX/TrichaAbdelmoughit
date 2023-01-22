@@ -2,6 +2,7 @@ package com.example.abdelmoughittricha;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     Button btn_reinitializer,btn_quitter;
     EditText number;
     TextView textview;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,5 +39,6 @@ public class MainActivity extends AppCompatActivity {
                 number.setText(null);
             }
         });
+
     }
 }
